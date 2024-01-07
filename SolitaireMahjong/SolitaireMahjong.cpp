@@ -9,7 +9,12 @@ int main()
 {
     Yama yama;
     Tehai tehai(yama);
-    tehai.Display();
+    while (true)
+    {
+        tehai.Display();
+        tehai.Discard();
+        tehai.Tumo();
+    }
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー

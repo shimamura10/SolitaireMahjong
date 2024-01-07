@@ -8,6 +8,8 @@ public:
 	std::vector<std::pair<char, int>> tehaiList = {};
 	Tehai(Yama& yama);
 	void Display();
+	void Discard();
+	void Tumo();
 private:
 	Yama& yama_;
 };

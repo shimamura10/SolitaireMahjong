@@ -6,6 +6,7 @@ class HaiTeigi
 public:
 	char kinds[4] = { 'w', 'p', 's', 'z' };
 	std::string zihaiNames[7] = { "Ea", "Sa", "We", "No", "Wh", "Gr", "Re" };
+	int GetZihaiNumber(std::string target);
 
 	//enum class Kind {
 	//	Manzi,
