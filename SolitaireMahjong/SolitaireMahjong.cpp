@@ -14,6 +14,13 @@ int main()
         tehai.Display();
         tehai.Discard();
         tehai.Tumo();
+        if (tehai.JudgeAgari())
+        {
+            cout << "agari!!!" << endl;
+        }
+        else {
+            cout << "not agari" << endl;
+        }
     }
 }
 
