@@ -12,6 +12,7 @@ public:
 	void Discard();
 	void Tumo();
 	bool JudgeAgari();
+	bool JudgeTenpai();
 private:
 	Yama& yama_;
 };

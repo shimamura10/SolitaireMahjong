@@ -121,7 +121,7 @@ bool Tehai::JudgeAgari()
 		while (copiedTehai.size() > 0)
 		{
 			Hai& initial = copiedTehai[0];
-			cout << "count of " << initial.kind_ << initial.number_ << " is " << count(copiedTehai.begin(), copiedTehai.end(), initial) << endl;
+			//cout << "count of " << initial.kind_ << initial.number_ << " is " << count(copiedTehai.begin(), copiedTehai.end(), initial) << endl;
 			// q‚ğ’T‚µ‚ÄÁ‚·
 			if (count(copiedTehai.begin(), copiedTehai.end(), initial) >= 3)
 			{
@@ -151,6 +151,26 @@ bool Tehai::JudgeAgari()
 		{
 			return true;
 		}
+	}
+	return false;
+}
+
+bool Tehai::JudgeTenpai()
+{
+	if (tehaiList.size() != 13)
+	{
+		return false;
+	}
+
+	for (auto& hai : Hai::allHaiList)
+	{
+		tehaiList.emplace_back(hai);
+		if (this->JudgeAgari())
+		{
+			tehaiList.erase(find(tehaiList.begin(), tehaiList.end(), hai));
+			return true;
+		}
+		tehaiList.erase(find(tehaiList.begin(), tehaiList.end(), hai));
 	}
 	return false;
 }

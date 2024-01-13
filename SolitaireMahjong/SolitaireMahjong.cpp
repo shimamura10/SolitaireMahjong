@@ -13,14 +13,13 @@ int main()
     {
         tehai.Display();
         tehai.Discard();
-        tehai.Tumo();
-        if (tehai.JudgeAgari())
+        if (tehai.JudgeTenpai())
         {
-            cout << "agari!!!" << endl;
+            cout << "Tenpai!!!" << endl;
+            tehai.Display();
+            break;
         }
-        else {
-            cout << "not agari" << endl;
-        }
+        tehai.Tumo();
     }
 }
 
