@@ -9,7 +9,18 @@ int main()
 {
     Yama yama;
     Tehai tehai(yama);
-    tehai.Display();
+    while (true)
+    {
+        tehai.Display();
+        tehai.Discard();
+        if (tehai.JudgeTenpai())
+        {
+            cout << "Tenpai!!!" << endl;
+            tehai.Display();
+            break;
+        }
+        tehai.Tumo();
+    }
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー

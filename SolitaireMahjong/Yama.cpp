@@ -6,8 +6,15 @@
 Yama::Yama()
 {
 	// 山のリストを作る
+	for (auto hai : Hai::allHaiList)
+	{
+		for (auto i = 0; i < 4; i++)
+		{
+			haiList.emplace_back(hai);
+		}
+	}
 	// 牌はpari<種類:char、数:int>
-	for (auto kind : kinds)
+	/*for (auto kind : kinds)
 	{
 		if (kind == kinds[3])
 		{
@@ -28,7 +35,7 @@ Yama::Yama()
 				}
 			}
 		}
-	}
+	}*/
 
 	// 山をシャッフル
 	std::random_device seed_gen;
